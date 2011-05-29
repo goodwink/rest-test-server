@@ -1,0 +1,24 @@
+%h1 Listing accounts
+
+%table
+  %tr
+    %th Account Number
+    %th Nickname
+    %th Authorizing Balance
+    %th
+    %th
+    %th
+
+  - @accounts.each do |account|
+    %tr
+      %d
+      %td= account.account_id
+      %td= account.nickname
+      %td= account.balances.where(reference: account.authorizing_balance_reference).first.amount
+      %td= link_to 'Show', account
+      %td= link_to 'Edit', edit_account_path(account)
+      %td= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Account', new_account_path
