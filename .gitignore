@@ -3,3 +3,9 @@ db/*.sqlite3
 log/*.log
 tmp/
 .sass-cache/
+/.redcar/lucene/_1o.cfs
+/.redcar/lucene_last_updated
+/.redcar/lucene/segments_1k
+/.redcar/lucene/segments.gen
+/.redcar/redcar.lock
+/.redcar/tags
